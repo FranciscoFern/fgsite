@@ -151,10 +151,12 @@
 
   /* B2B */
   .b2b{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .b2b-art{border-radius:26px;background:linear-gradient(135deg,var(--soft),#eaf3fb);padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .b2b-art div{background:#fff;border-radius:16px;padding:20px;border:1px solid var(--line)}
-  .b2b-art strong{display:block;font-size:1.9rem;font-weight:800;color:var(--blue)}
-  .b2b-art small{color:var(--muted);font-size:.85rem}
+  .b2b-art{border-radius:26px;background:linear-gradient(135deg,var(--soft),#eaf3fb);padding:28px;display:grid;gap:12px}
+  .b2b-item{display:flex;align-items:center;gap:16px;background:#fff;border-radius:16px;padding:18px 20px;border:1px solid var(--line)}
+  .b2b-ic{flex:none;width:48px;height:48px;border-radius:12px;background:#e8f2fc;color:var(--blue);display:grid;place-items:center}
+  .b2b-ic svg{width:24px;height:24px}
+  .b2b-item strong{display:block;font-size:1.15rem;font-weight:700;color:var(--text);line-height:1.2}
+  .b2b-item small{display:block;color:var(--muted);font-size:.92rem;margin-top:2px}
   .checks{list-style:none;margin:22px 0 30px;display:grid;gap:10px}
   .checks li{display:flex;gap:10px;color:var(--muted)}
   .checks li::before{content:"✓";color:#fff;background:var(--red);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:.75rem;flex:none;margin-top:2px}
@@ -252,6 +254,8 @@
     .reviews,.final{padding:40px 22px}
     .chip-float{display:none}
     .wa-float{bottom:calc(96px + env(safe-area-inset-bottom));right:16px}
+    .b2b-art{padding:14px;border-radius:20px}
+    .b2b-item{padding:16px}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.bar i{width:var(--w)}}
 </style>
@@ -443,11 +447,23 @@
       </ul>
       <a class="btn btn-primary" data-wa="Olá! Gostaria de falar sobre atendimento para minha empresa.">Falar sobre minha empresa</a>
     </div>
-    <div class="b2b-art reveal" aria-hidden="true">
-      <div><strong>Remoto</strong><small>Problemas resolvidos à distância</small></div>
-      <div><strong>No local</strong><small>Visita técnica quando precisar</small></div>
-      <div><strong>Mensal</strong><small>Contrato com prioridade</small></div>
-      <div><strong>CNPJ</strong><small>Nota fiscal e faturamento</small></div>
+    <div class="b2b-art reveal">
+      <div class="b2b-item">
+        <span class="b2b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4M9 10l2 2 4-4"/></svg></span>
+        <span><strong>Remoto</strong><small>Problemas resolvidos à distância, sem parar o trabalho</small></span>
+      </div>
+      <div class="b2b-item">
+        <span class="b2b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <span><strong>No local</strong><small>Visita técnica na sua empresa quando precisar</small></span>
+      </div>
+      <div class="b2b-item">
+        <span class="b2b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+        <span><strong>Mensal</strong><small>Contrato de manutenção com atendimento prioritário</small></span>
+      </div>
+      <div class="b2b-item">
+        <span class="b2b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
+        <span><strong>CNPJ</strong><small>Nota fiscal e faturamento para empresas</small></span>
+      </div>
     </div>
   </div>
 </section>
