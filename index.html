@@ -224,7 +224,7 @@
   .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem}
 
   /* Floating WhatsApp */
-  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px}
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:2147483000;display:flex;align-items:center;gap:10px}
   .wa-float .lbl{background:#fff;border-radius:999px;padding:9px 16px;font-size:.85rem;font-weight:500;box-shadow:0 8px 24px -8px rgba(0,0,0,.25)}
   .wa-float .bub{width:60px;height:60px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.7);animation:pulse 2.5s infinite}
   .wa-float svg{width:32px;height:32px;fill:#fff}
@@ -251,6 +251,7 @@
     .hero-ctas .btn{width:100%;justify-content:center}
     .reviews,.final{padding:40px 22px}
     .chip-float{display:none}
+    .wa-float{bottom:calc(96px + env(safe-area-inset-bottom));right:16px}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.bar i{width:var(--w)}}
 </style>
